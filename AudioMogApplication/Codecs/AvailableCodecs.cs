@@ -11,6 +11,7 @@ namespace AudioMog.Application.Codecs
 				default: return null;
 				case MaterialCodecType.OGGVorbis: return new OggVorbisCodec();
 				case MaterialCodecType.HCA: return new HcaACodec();
+				case MaterialCodecType.ATRAC9: return new Atrac9Codec();
 			}
 		}
 	}

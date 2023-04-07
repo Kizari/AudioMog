@@ -59,7 +59,7 @@ namespace AudioMog.Application.AudioFileRebuilder
 				{
 					OriginalEntry = entry,
 					HeaderPortion = fileBytes.SubArray(entry.HeaderPosition, entry.NoStreamHeaderSize),
-					RawPortion = fileBytes.SubArray(entry.InnerStreamStartPosition, entry.InnerStreamSize),
+					RawPortion = fileBytes.SubArray(entry.InnerStreamStartPosition, entry.InnerStreamSize - 48),
 					ExpectedName = $"{Path.GetFileNameWithoutExtension(fileInfo.Name)}_{entry.EntryIndex:D3}",
 					CurrentCodec = entry.Codec,
 				});

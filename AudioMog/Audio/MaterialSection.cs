@@ -122,6 +122,11 @@ namespace AudioMog.Core.Audio
 					case MaterialCodecType.HCA:
 						ExtraDataObject = new HcaExtraData(this, binaryReader);
 						break;
+					
+					case MaterialCodecType.ATRAC9:
+						InnerStreamStartPosition = StreamPosition;
+						ExtraDataObject = new Atrac9ExtraData(this, binaryReader);
+						break;
 				}
 			}
 		}

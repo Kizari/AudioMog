@@ -47,6 +47,16 @@ namespace AudioMog.Terminal
 
 		public static void Main(string[] args)
 		{
+			if (args == null || args.Length == 0)
+			{
+				args = new[]
+				{
+					//@"C:\Code\AudioMog\AudioMogTerminal\bin\Debug\224086177513787500.orb_Project\RebuildSettings.json"
+					@"C:\Code\AudioMog\AudioMogTerminal\bin\Debug\walla_loop.orb_Project\RebuildSettings.json"
+					//@"C:\Code\AudioMog\AudioMogTerminal\bin\Debug\walla_loop.orb.sab"
+				};
+			}
+
 			Logger = new ConsoleApplicationLogger();
 			ApplicationPath = AppDomain.CurrentDomain.BaseDirectory;
 
